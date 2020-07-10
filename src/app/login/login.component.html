@@ -1,0 +1,29 @@
+<mat-card>
+  <form  [formGroup]="authForm" class="form mt-4" (submit)="login()">  
+  <div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label    type="number">{{labels.agency}}</mat-label>
+      <input matInput formControlName="agency" required >
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label type="number">{{labels.account}}</mat-label>
+      <input matInput   formControlName="account"  required>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>{{labels.password}}</mat-label>
+      <input matInput  formControlName="password"  type="password" required>
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button
+        matTooltip="Login"
+        aria-label="Submit">
+  Login
+</button>
+  </div>
+</form>
+</mat-card>
+
+
