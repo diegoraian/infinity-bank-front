@@ -1,5 +1,6 @@
 export interface User {
-    name: string;
+    id: number,
+    name: string,
     agency: string,
     accountNumber: string,
     balance: String

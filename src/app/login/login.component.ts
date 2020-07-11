@@ -38,7 +38,9 @@ export class LoginComponent implements OnInit {
     
     this.authService.authenticate(agency, account,password)
     .subscribe(
-        () => this.router.navigate(['user', account]),
+        () => { 
+          alert('Bem vindo');
+          this.router.navigate(['dashboard'])},
         error => {
             console.log(error);
             this.authForm.reset();
